@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.1.0.rc2'
+# Add stripe for payment processing
+gem 'stripe', :git => 'http://github.com/stripe/stripe-ruby'
 
 group :development, :test do
 	gem 'sqlite3'
