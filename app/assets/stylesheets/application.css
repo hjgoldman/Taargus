@@ -12,4 +12,10 @@
  *= require 'masonry/transitions'
  *= require_tree .
  */
+.share-buttons{
+	list-style: none;
+}
 
+.share-buttons li{
+	display: inline;
+}
