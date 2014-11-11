@@ -18,7 +18,6 @@ gem 'will_paginate', '~>3.0.5'
 gem 'will_paginate-bootstrap'
 gem 'forum_monster'
 
-
 group :development, :test do
 	gem 'sqlite3'
 end
