@@ -27,7 +27,23 @@
     </div>
   <% end %>
 </div>
+            <center>
+              <ul class="share-buttons">
+                <li>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftaargus.com%2F&t=" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="http://i.imgur.com/bfMeeWZ.png">
 
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Ftaargustaargus.herokuapp.com%2F&text=:%20http%3A%2F%2Ftaargus.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="http://i.imgur.com/wAoQrZ4.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.reddit.com/submit?url=http%3A%2F%2Ftaargus.com%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="http://i.imgur.com/jeQYksM.png">
+                  </a>
+                </li>
+              </ul>
+            </center>
 
 <div class="center">
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
