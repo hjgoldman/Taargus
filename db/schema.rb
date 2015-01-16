@@ -11,27 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105195954) do
-
-  create_table "categories", force: true do |t|
-    t.string   "title"
-    t.boolean  "state",      default: true
-    t.integer  "position",   default: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "forums", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.boolean  "state",        default: true
-    t.integer  "topics_count", default: 0
-    t.integer  "posts_count",  default: 0
-    t.integer  "position",     default: 0
-    t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141030184953) do
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -45,27 +25,6 @@ ActiveRecord::Schema.define(version: 20141105195954) do
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
-
-  create_table "posts", force: true do |t|
-    t.text     "body"
-    t.integer  "forum_id"
-    t.integer  "topic_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "topics", force: true do |t|
-    t.string   "title"
-    t.integer  "hits",        default: 0
-    t.boolean  "sticky",      default: false
-    t.boolean  "locked",      default: false
-    t.integer  "posts_count"
-    t.integer  "forum_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -81,8 +40,6 @@ ActiveRecord::Schema.define(version: 20141105195954) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.integer  "topics_count",           default: 0
-    t.integer  "posts_count",            default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
